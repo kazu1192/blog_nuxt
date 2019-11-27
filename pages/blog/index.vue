@@ -1,61 +1,75 @@
 <template>
-  <div class="container">
-    <div class="navbar">
-      THIS IS NAVBAR
+  <div id="app">
+    <div class="container">
+      <div class="header">
+        <div class="title primary">
+          KAZU'S BLOG
+        </div>
+        <div class="subtitle primary">
+          <div class="category">CATEGORY1</div>
+          <div class="category">CATEGORY2</div>
+          <div class="category">CATEGORY3</div>
+        </div>
+      </div>
+      <div class="top-message primary">
+        WELCOME MESSAGE
+      </div>
+      <div class="cards">
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+        <div class="card card-primary">
+          <div class="card-image" />
+          <p>CARD TITLE</p>
+          <p>CARD CONTENTS</p>
+        </div>
+      </div>
+      <div class="more">
+        MORE PAGE...
+      </div>
     </div>
-    <div class="header">
-      <div class="title title-primary">
-        KAZU'S BLOG
-      </div>
-      <div class="subtitle subtitle-primary">
-        THIS IS BLOG PAGE
-      </div>
-    </div>
-    <div class="cards">
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-    </div>
-    <div class="footer">
-      THIS IS FOOTER
-    </div>
+    <div class="footer fotter-primary" />
   </div>
 </template>
 
@@ -80,42 +94,49 @@ export default {
 
 <style lang="scss">
 .container {
+  width: 60%;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.navbar {
-  padding-bottom: 2em;
-}
-
 .header {
-  margin: 6em 0;
+  height: 12em;
+  margin: 3em auto;
 }
 
 .title {
+  text-align: left;
   font-size: 8em;
 }
 
-.title-primary {
+.category {
+  text-align: right;
+  font-size: 2em;
+}
+
+.primary {
   color: RGB(232, 240, 222);
 }
 
-.subtitle {
+.top-message {
   font-size: 4em;
+  margin: 3em auto;
 }
 
-.subtitle-primary {
-  color: RGB(232, 240, 222);
+.cards {
+  width: 100%;
 }
 
 .card {
-  height: 14em;
-  width: 60%;
-  margin: 2em auto;
-  padding: 0.5em;
+  height: 12em;
+  width: 30%;
+  margin: 0.5em;
+  padding: 0.2em;
   font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .card-primary {
@@ -125,8 +146,33 @@ export default {
 
 .card-image {
   height: 60%;
-  width: 60%;
-  margin: 0.8em auto;
+  width: 90%;
+  margin: 0.6em auto;
   background-color: RGB(232, 240, 222);
+}
+
+.more {
+  font-size: 1.5em;
+  margin: 1em auto 6em;
+  color: RGB(011, 054, 097);
+}
+
+.footer {
+  width: 100%;
+  height: 4em;
+  margin-top: 3em;
+  padding-top: 1.5em;
+  font-size: 1.5em;
+}
+
+.footer-info {
+  width: 60%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.fotter-primary {
+  color: RGB(232, 240, 222);
+  background-color: RGB(011, 054, 097);
 }
 </style>
