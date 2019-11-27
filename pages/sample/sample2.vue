@@ -22,6 +22,8 @@
         <p>CARD TITLE</p>
         <p>CARD CONTENTS</p>
       </div>
+    </div>
+    <div class="cards">
       <div class="card card-primary">
         <div class="card-image" />
         <p>CARD TITLE</p>
@@ -32,16 +34,8 @@
         <p>CARD TITLE</p>
         <p>CARD CONTENTS</p>
       </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
-      <div class="card card-primary">
-        <div class="card-image" />
-        <p>CARD TITLE</p>
-        <p>CARD CONTENTS</p>
-      </div>
+    </div>
+    <div class="cards">
       <div class="card card-primary">
         <div class="card-image" />
         <p>CARD TITLE</p>
@@ -110,12 +104,18 @@ export default {
   color: RGB(232, 240, 222);
 }
 
+.cards {
+  width: 100%;
+}
+
 .card {
   height: 14em;
-  width: 60%;
-  margin: 2em auto;
+  width: 45%;
+  margin: 0.5em;
   padding: 0.5em;
   font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .card-primary {
