@@ -25,6 +25,11 @@ html {
 }
 
 body {
+  width: 100%;
+  min-height: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: RGB(104, 183, 135);
 }
 
