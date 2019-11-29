@@ -2,94 +2,33 @@
   <div id="app">
     <div class="header primary">
       <div class="title">
-        KAZU'S BLOG
-      </div>
-      <div class="categorys">
-        <a class="category" href="#">CATEGORY1</a>
-        <a class="category" href="#">CATEGORY2</a>
-        <a class="category" href="#">CATEGORY3</a>
+        {{ title }}
       </div>
     </div>
     <div class="container">
-      <div class="container-card">
+      <div v-for="item in contents" :key="item.id" class="container-card">
         <div class="container-card-imageBx">
-          <img class="img" src="~/assets/image1.jpeg" />
+          <img v-bind:src="item.img_src" class="img" />
         </div>
         <div class="container-card-contentBx">
           <div class="content">
             <div class="content-title">
-              What is Lorem Ipsum?
+              {{ item.title }}
             </div>
             <div class="content-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              {{ item.text }}
             </div>
-            <a class="content-read" href="#">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container-card">
-        <div class="container-card-imageBx">
-          <img class="img" src="~/assets/image2.jpeg" />
-        </div>
-        <div class="container-card-contentBx">
-          <div class="content">
-            <div class="content-title">
-              What is Lorem Ipsum?
-            </div>
-            <div class="content-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-            </div>
-            <a class="content-read" href="#">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container-card">
-        <div class="container-card-imageBx">
-          <img class="img" src="~/assets/image3.jpeg" />
-        </div>
-        <div class="container-card-contentBx">
-          <div class="content">
-            <div class="content-title">
-              What is Lorem Ipsum?
-            </div>
-            <div class="content-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-            </div>
-            <a class="content-read" href="#">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container-card">
-        <div class="container-card-imageBx">
-          <img class="img" src="~/assets/image4.jpeg" />
-        </div>
-        <div class="container-card-contentBx">
-          <div class="content">
-            <div class="content-title">
-              What is Lorem Ipsum?
-            </div>
-            <div class="content-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-            </div>
-            <a class="content-read" href="#">
-              Read More
-            </a>
+            <nuxt-link class="content-read" to="/blog/post">
+              {{ readmore }}
+            </nuxt-link>
           </div>
         </div>
       </div>
     </div>
-    <div class="more">
-      MORE PAGE...
+    <div class="footer">
+      <nuxt-link class="more" to="#">
+        {{ pagemore }}
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -98,22 +37,45 @@
 export default {
   data() {
     return {
-      newItem: '',
-      todos: []
-    }
-  },
-  methods: {
-    addItem() {
-      const todo = {
-        item: this.newItem
-      }
-      this.todos.push(todo)
+      title: "KAZU'S BLOG",
+      contents: [
+        {
+          id: 1,
+          img_src: require('../../assets/image1.jpeg'),
+          title: 'What is Lorem Ipsum?',
+          text:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+        },
+        {
+          id: 2,
+          img_src: require('../../assets/image2.jpeg'),
+          title: 'What is Lorem Ipsum?',
+          text:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+        },
+        {
+          id: 3,
+          img_src: require('../../assets/image3.jpeg'),
+          title: 'What is Lorem Ipsum?',
+          text:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+        },
+        {
+          id: 4,
+          img_src: require('../../assets/image4.jpeg'),
+          title: 'What is Lorem Ipsum?',
+          text:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+        }
+      ],
+      readmore: 'READ MORE',
+      pagemore: 'MORE PAGE...'
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header {
   margin: 3em auto;
   color: RGB(232, 240, 222);
@@ -125,7 +87,7 @@ export default {
 }
 
 .category {
-  text-align: right;
+  text-align: left;
   font-size: 2em;
 }
 
@@ -227,8 +189,12 @@ export default {
 
 .more {
   font-size: 1.8em;
-  margin: 1em auto 6em;
+  margin: 25px;
   color: RGB(011, 054, 097);
+}
+
+.footer {
+  height: 100px;
 }
 
 @media (max-width: 1000px) {
