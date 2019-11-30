@@ -17,6 +17,7 @@ export default {
 
 <style scoped>
 .markdown-body {
+  margin: 40px;
   padding: 60px;
   color: RGB(232, 240, 222);
   background: RGB(011, 054, 097);
