@@ -6,22 +6,16 @@
       </div>
     </div>
     <div class="container">
-      <div v-for="item in contents" :key="item.id" class="container-card">
-        <div class="container-card-imageBx">
-          <img v-bind:src="item.img_src" class="img" />
+      <div v-for="post in postList" :key="post.id" class="card">
+        <div class="imageBx">
+          <img :src="src" class="img" />
         </div>
-        <div class="container-card-contentBx">
-          <div class="content">
-            <div class="content-title">
-              {{ item.title }}
-            </div>
-            <div class="content-text">
-              {{ item.text }}
-            </div>
-            <nuxt-link class="content-read" to="/blog/post">
-              {{ readmore }}
-            </nuxt-link>
-          </div>
+        <div class="contentBx">
+          <h2 class="content-title">{{ post.title }}</h2>
+          <p class="content-text">{{ post.preview }} ...</p>
+          <router-link class="content-read" to="/blog/post">
+            {{ readmore }}
+          </router-link>
         </div>
       </div>
     </div>
@@ -34,43 +28,28 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
+  name: 'Posts',
   data() {
     return {
       title: "KAZU'S BLOG",
-      contents: [
-        {
-          id: 1,
-          img_src: require('../../assets/image1.jpeg'),
-          title: 'What is Lorem Ipsum?',
-          text:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
-        },
-        {
-          id: 2,
-          img_src: require('../../assets/image2.jpeg'),
-          title: 'What is Lorem Ipsum?',
-          text:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
-        },
-        {
-          id: 3,
-          img_src: require('../../assets/image3.jpeg'),
-          title: 'What is Lorem Ipsum?',
-          text:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
-        },
-        {
-          id: 4,
-          img_src: require('../../assets/image4.jpeg'),
-          title: 'What is Lorem Ipsum?',
-          text:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
-        }
-      ],
-      readmore: 'READ MORE',
-      pagemore: 'MORE PAGE...'
+      pagemore: 'PAGE MORE...',
+      readmore: 'READ MORE'
     }
+  },
+  computed: {
+    ...mapState('posts', ['postList']),
+    src: (val) => {
+      return require(val)
+    }
+  },
+  mounted() {
+    this.getPostList()
+  },
+  methods: {
+    ...mapActions('posts', ['getPostList'])
   }
 }
 </script>
@@ -100,7 +79,7 @@ export default {
   flex-wrap: wrap;
 }
 
-.container-card {
+.card {
   position: relative;
   display: flex;
   justify-content: center;
@@ -109,16 +88,20 @@ export default {
   margin: 100px 0;
 }
 
-.container-card:nth-child(odd) {
+.card:nth-child(odd) {
   flex-direction: row;
 }
 
-.container-card:nth-child(even) {
+.card:nth-child(even) {
   flex-direction: row-reverse;
   text-align: right;
 }
 
-.container-card-imageBx {
+.card:nth-child(even) .imageBx {
+  left: -25px;
+}
+
+.imageBx {
   position: relative;
   left: 25px;
   width: 500px;
@@ -126,11 +109,7 @@ export default {
   z-index: 1;
 }
 
-.container-card:nth-child(even) .container-card-imageBx {
-  left: -25px;
-}
-
-.img {
+.imageBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -140,24 +119,7 @@ export default {
   background-color: RGB(232, 240, 222);
 }
 
-.container-card-contentBx {
-  position: relative;
-  right: 25px;
-  width: 500px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 60px 20px 100px;
-  background: RGB(011, 054, 097);
-}
-
-.container-card:nth-child(even) .container-card-contentBx {
-  right: -25px;
-  padding: 20px 100px 20px 60px;
-}
-
-.container-card-contentBx:before {
+.contentBx:before {
   content: '';
   position: absolute;
   top: -50px;
@@ -168,13 +130,30 @@ export default {
   z-index: -1;
 }
 
+.contentBx {
+  position: relative;
+  right: 25px;
+  width: 500px;
+  height: 400px;
+  display: box;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 60px 20px 100px;
+  background: RGB(011, 054, 097);
+}
+
+.card:nth-child(even) .contentBx {
+  right: -25px;
+  padding: 60px 100px 20px 60px;
+}
+
 .content-title {
   font-size: 2em;
   color: RGB(232, 240, 222);
 }
 
 .content-text {
-  font-size: 1em;
+  margin-top: 10px;
   color: RGB(232, 240, 222);
 }
 
@@ -202,19 +181,19 @@ export default {
     font-size: 75%;
   }
 
-  .container-card {
+  .card {
     flex-direction: column;
     max-width: 350px;
     margin: 25px 25px;
   }
 
-  .container-card-imageBx {
+  .imageBx {
     width: 100%;
     height: 250px;
     left: 0;
   }
 
-  .container-card-contentBx {
+  .contentBx {
     width: 100%;
     height: auto;
     right: 0;
@@ -222,16 +201,16 @@ export default {
     text-align: center;
   }
 
-  .container-card-contentBx:before {
+  .contentBx:before {
     top: 0;
     bottom: 0;
   }
 
-  .container-card:nth-child(even) .container-card-imageBx {
+  .card:nth-child(even) .imageBx {
     left: 0px;
   }
 
-  .container-card:nth-child(even) .container-card-contentBx {
+  .card:nth-child(even) .contentBx {
     right: 0px;
     padding: 30px;
   }
