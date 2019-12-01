@@ -1,22 +1,5 @@
 {
   "fileMap": {
-    "contents/json/2019-02-16-sample001.json": {
-      "title": "テスト記事1",
-      "description": "テスト記事1です",
-      "tags": [
-        "タグ1"
-      ],
-      "category": "その他",
-      "thumbnail": "../../assets/image1.jpeg",
-      "created_at": "2019-02-16 00:08:00",
-      "updated_at": "2019-02-16 00:00:00",
-      "preview": "Hello World\n\nHello World",
-      "dir": "contents/json",
-      "base": "2019-02-16-sample001.json",
-      "ext": ".json",
-      "sourceBase": "2019-02-16-sample001.md",
-      "sourceExt": ".md"
-    },
     "contents/json/2019-02-16-sample002.json": {
       "title": "テスト記事2",
       "description": "テスト記事2です",
@@ -24,7 +7,7 @@
         "タグ2"
       ],
       "category": "その他",
-      "thumbnail": "../../assets/image2.jpeg",
+      "thumbnail": "@/assets/image2.jpeg",
       "created_at": "2019-02-16 00:08:00",
       "updated_at": "2019-02-16 00:00:00",
       "preview": "Hello World\n\nHello World",
@@ -34,6 +17,23 @@
       "sourceBase": "2019-02-16-sample002.md",
       "sourceExt": ".md"
     },
+    "contents/json/2019-02-16-sample001.json": {
+      "title": "テスト記事1",
+      "description": "テスト記事1です",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "../assets/image1.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "Hello World\n\nHello World",
+      "dir": "contents/json",
+      "base": "2019-02-16-sample001.json",
+      "ext": ".json",
+      "sourceBase": "2019-02-16-sample001.md",
+      "sourceExt": ".md"
+    },
     "contents/json/2019-02-16-sample003.json": {
       "title": "テスト記事3",
       "description": "テスト記事3です",
@@ -41,7 +41,7 @@
         "タグ3"
       ],
       "category": "その他",
-      "thumbnail": "../../assets/image3.jpeg",
+      "thumbnail": "@/assets/image3.jpeg",
       "created_at": "2019-02-16 00:08:00",
       "updated_at": "2019-02-16 00:00:00",
       "preview": "Hello World\n\nHello World",
@@ -52,13 +52,14 @@
       "sourceExt": ".md"
     },
     "contents/json/dizzy.json": {
+      "id": "dizzy01",
       "title": "GGXrd Rev2 Dizzy",
       "description": "テスト記事1です",
       "tags": [
         "タグ1"
       ],
       "category": "その他",
-      "thumbnail": "../../assets/image4.jpeg",
+      "thumbnail": "@/assets/image4.jpeg",
       "created_at": "2019-02-16 00:08:00",
       "updated_at": "2019-02-16 00:00:00",
       "preview": "GGXrd Rev2 Dizzy\n\n個人用メモ\n\n[TOC]\n\n暴れ潰し\n\n暴れ潰し>投げ の割合で行う。\n暴れ潰しを行った結果相手がガードしていた場合、\n無理に攻め継続せず離れることも大事。\n\n2P>5HS (最速暴れ対策)\n2P>ダッシュ 5K (ダッシュ反応して暴れるタイプに)\n2P>2HS",
