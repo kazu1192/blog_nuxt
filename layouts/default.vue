@@ -1,8 +1,22 @@
 <template>
   <div>
+    <header>
+      <layout-nav />
+    </header>
     <nuxt />
+    <footer />
   </div>
 </template>
+
+<script>
+import LayoutNav from '@/components/layouts/nav.vue'
+
+export default {
+  components: {
+    LayoutNav
+  }
+}
+</script>
 
 <style>
 html {

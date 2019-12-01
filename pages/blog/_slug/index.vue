@@ -1,6 +1,13 @@
 <template>
-  <div class="markdown-body">
-    <div v-html="$md.render(article.bodyContent)" />
+  <div id="app">
+    <div class="header primary">
+      <div class="title">
+        {{ title }}
+      </div>
+    </div>
+    <div class="markdown-body">
+      <div v-html="$md.render(article.bodyContent)" />
+    </div>
   </div>
 </template>
 
@@ -9,6 +16,7 @@ export default {
   async asyncData() {
     const article = await import(`~/contents/json/dizzy.json`)
     return {
+      title: "KAZU'S BLOG",
       article
     }
   }

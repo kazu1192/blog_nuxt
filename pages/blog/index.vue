@@ -8,7 +8,7 @@
     <div class="container">
       <div v-for="post in postList" :key="post.id" class="card">
         <div class="imageBx">
-          <img :src="src" class="img" />
+          <img :src="`render(blog/${post.id}/_thumbnail.jpg)`" class="img" />
         </div>
         <div class="contentBx">
           <h2 class="content-title">{{ post.title }}</h2>
@@ -40,10 +40,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('posts', ['postList']),
-    src: (val) => {
-      return require(val)
-    }
+    ...mapState('posts', ['postList'])
   },
   mounted() {
     this.getPostList()
