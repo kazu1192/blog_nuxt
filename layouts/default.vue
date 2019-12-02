@@ -1,50 +1,19 @@
 <template>
   <div>
-    <header>
-      <layout-nav />
-    </header>
+    <layout-navbar />
     <nuxt />
-    <footer />
+    <layout-footer />
   </div>
 </template>
 
 <script>
-import LayoutNav from '@/components/layouts/nav.vue'
+import LayoutNavbar from '@/components/layouts/Navbar.vue'
+import LayoutFooter from '@/components/layouts/Footer.vue'
 
 export default {
   components: {
-    LayoutNav
+    LayoutNavbar,
+    LayoutFooter
   }
 }
 </script>
-
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: RGB(104, 183, 135);
-}
-</style>

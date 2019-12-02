@@ -1,7 +1,6 @@
 ---
 id: 'dizzy01'
 title: 'GGXrd Rev2 Dizzy'
-description: テスト記事1です
 tags:
   - タグ1
 category: その他

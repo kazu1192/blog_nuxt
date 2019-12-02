@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
+    "tailwind": "tailwind build assets/css/tailwind.css -o assets/css/styles.css",
     "processmd": "processmd contents/markdown/**/*.md --preview 160 --stdout --outputDir contents/json > contents/summary.json"
   },
   "dependencies": {

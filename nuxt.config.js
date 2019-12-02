@@ -8,6 +8,9 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      class: 'bg-green-500 text-green-200 flex w-full h-full'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
