@@ -1,19 +1,14 @@
 <template>
   <section>
-    <blog-title />
-    <div class="flex">
-      <blog-card />
-    </div>
+    <blog-card />
   </section>
 </template>
 
 <script>
-import BlogTitle from '@/components/ui/Title.vue'
 import BlogCard from '@/components/pages/BlogCard.vue'
 
 export default {
   components: {
-    BlogTitle,
     BlogCard
   }
 }
