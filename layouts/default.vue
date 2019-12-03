@@ -1,50 +1,35 @@
 <template>
   <div>
-    <header>
-      <layout-nav />
-    </header>
-    <nuxt />
-    <footer />
+    <navbar-component />
+    <header-component />
+    <transition mode="out-in">
+      <nuxt />
+    </transition>
+    <footer-component />
   </div>
 </template>
 
 <script>
-import LayoutNav from '@/components/layouts/nav.vue'
+import NavbarComponent from '@/components/layouts/Navbar.vue'
+import HeaderComponent from '@/components/layouts/Header.vue'
+import FooterComponent from '@/components/layouts/Footer.vue'
 
 export default {
   components: {
-    LayoutNav
+    NavbarComponent,
+    HeaderComponent,
+    FooterComponent
   }
 }
 </script>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<style lang="scss" scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s;
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: RGB(104, 183, 135);
+.v-enter,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

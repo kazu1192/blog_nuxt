@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
+    "tailwind": "tailwind build assets/css/tailwind.css -o assets/css/styles.css",
     "processmd": "processmd contents/markdown/**/*.md --preview 160 --stdout --outputDir contents/json > contents/summary.json"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/tailwindcss": "^1.2.0",
     "@vue/test-utils": "^1.0.0-beta.27",
+    "animate.css": "^3.7.2",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "eslint": "^6.7.1",
@@ -37,6 +39,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "jest": "^24.1.0",
     "node-sass": "^4.13.0",
+    "nuxt-svg-loader": "^1.0.1",
     "prettier": "^1.16.4",
     "processmd": "^4.5.0",
     "sass-loader": "^8.0.0",

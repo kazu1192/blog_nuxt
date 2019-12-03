@@ -8,6 +8,9 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      class: 'text-green-200 bg-green-500'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/styles.css'],
+  css: ['@/assets/css/styles.css', 'animate.css/animate.min.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -43,7 +46,8 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-svg-loader'
   ],
   /*
    ** Axios module configuration

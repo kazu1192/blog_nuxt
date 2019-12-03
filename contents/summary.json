@@ -1,25 +1,7 @@
 {
   "fileMap": {
-    "contents/json/2019-02-16-sample002.json": {
-      "title": "テスト記事2",
-      "description": "テスト記事2です",
-      "tags": [
-        "タグ2"
-      ],
-      "category": "その他",
-      "thumbnail": "@/assets/image2.jpeg",
-      "created_at": "2019-02-16 00:08:00",
-      "updated_at": "2019-02-16 00:00:00",
-      "preview": "Hello World\n\nHello World",
-      "dir": "contents/json",
-      "base": "2019-02-16-sample002.json",
-      "ext": ".json",
-      "sourceBase": "2019-02-16-sample002.md",
-      "sourceExt": ".md"
-    },
-    "contents/json/2019-02-16-sample001.json": {
-      "title": "テスト記事1",
-      "description": "テスト記事1です",
+    "contents/json/sample01.json": {
+      "title": "What is Lorem Ipsum?",
       "tags": [
         "タグ1"
       ],
@@ -27,34 +9,16 @@
       "thumbnail": "../assets/image1.jpeg",
       "created_at": "2019-02-16 00:08:00",
       "updated_at": "2019-02-16 00:00:00",
-      "preview": "Hello World\n\nHello World",
+      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
       "dir": "contents/json",
-      "base": "2019-02-16-sample001.json",
+      "base": "sample01.json",
       "ext": ".json",
-      "sourceBase": "2019-02-16-sample001.md",
-      "sourceExt": ".md"
-    },
-    "contents/json/2019-02-16-sample003.json": {
-      "title": "テスト記事3",
-      "description": "テスト記事3です",
-      "tags": [
-        "タグ3"
-      ],
-      "category": "その他",
-      "thumbnail": "@/assets/image3.jpeg",
-      "created_at": "2019-02-16 00:08:00",
-      "updated_at": "2019-02-16 00:00:00",
-      "preview": "Hello World\n\nHello World",
-      "dir": "contents/json",
-      "base": "2019-02-16-sample003.json",
-      "ext": ".json",
-      "sourceBase": "2019-02-16-sample003.md",
+      "sourceBase": "sample01.md",
       "sourceExt": ".md"
     },
     "contents/json/dizzy.json": {
       "id": "dizzy01",
       "title": "GGXrd Rev2 Dizzy",
-      "description": "テスト記事1です",
       "tags": [
         "タグ1"
       ],
@@ -68,12 +32,78 @@
       "ext": ".json",
       "sourceBase": "dizzy.md",
       "sourceExt": ".md"
+    },
+    "contents/json/sample02.json": {
+      "title": "What is Lorem Ipsum?",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "../assets/image1.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+      "dir": "contents/json",
+      "base": "sample02.json",
+      "ext": ".json",
+      "sourceBase": "sample02.md",
+      "sourceExt": ".md"
+    },
+    "contents/json/sample03.json": {
+      "title": "What is Lorem Ipsum?",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "../assets/image1.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+      "dir": "contents/json",
+      "base": "sample03.json",
+      "ext": ".json",
+      "sourceBase": "sample03.md",
+      "sourceExt": ".md"
+    },
+    "contents/json/sample05.json": {
+      "title": "What is Lorem Ipsum?",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "../assets/image1.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "Sample",
+      "dir": "contents/json",
+      "base": "sample05.json",
+      "ext": ".json",
+      "sourceBase": "sample05.md",
+      "sourceExt": ".md"
+    },
+    "contents/json/sample04.json": {
+      "title": "What is Lorem Ipsum?",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "../assets/image1.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+      "dir": "contents/json",
+      "base": "sample04.json",
+      "ext": ".json",
+      "sourceBase": "sample04.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "contents/markdown/2019-02-16-sample001.md",
-    "contents/markdown/2019-02-16-sample002.md",
-    "contents/markdown/2019-02-16-sample003.md",
-    "contents/markdown/dizzy.md"
+    "contents/markdown/dizzy.md",
+    "contents/markdown/sample01.md",
+    "contents/markdown/sample02.md",
+    "contents/markdown/sample03.md",
+    "contents/markdown/sample04.md",
+    "contents/markdown/sample05.md"
   ]
 }
