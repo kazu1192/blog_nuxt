@@ -1,13 +1,7 @@
 <template>
   <div>
-    <div id="hamburger">
-      <div @click="onVisiblity">
-        <button-svg />
-      </div>
-    </div>
-
     <transition>
-      <nav :style="{ visibility: visibility }" class="menu">
+      <nav :class="{ open: isOpen }" class="global-nav">
         <div>
           <ul>
             <li><a href="#">Home</a></li>
@@ -19,65 +13,94 @@
         </div>
       </nav>
     </transition>
+    <div @click="toggleOpenClass" class="nav-toggle">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import ButtonSvg from '@/assets/icons/navbutton.svg'
-
 export default {
-  components: {
-    ButtonSvg
-  },
   data() {
     return {
-      isOpen: false,
-      visibility: 'hidden'
+      isOpen: false
     }
   },
   methods: {
-    onVisiblity() {
-      this.visibility = 'visibility'
+    toggleOpenClass() {
+      this.isOpen = !this.isOpen
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-/* Show Menu */
-.menu {
-  position: fixed;
+.global-nav {
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  position: fixed;
+  z-index: 1;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu > div {
-  background: var(--overlay-color);
-  border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0);
-  transition: all 0.4s ease;
-}
-
-/* animated */
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s;
-}
-.v-enter,
-.v-leave-to {
+  font-size: 29px;
   opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 2;
+
+  > div {
+    position: relative;
+    width: 36px;
+  }
+
+  span {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: #fff;
+    position: absolute;
+    transition: transform 0.6s ease-in-out, top 0.5s ease;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 14px;
+    }
+    &:nth-child(3) {
+      top: 28px;
+    }
+  }
+
+  &:hover span:nth-child(1) {
+    top: 4px;
+  }
+  &:hover span:nth-child(3) {
+    top: 23px;
+  }
 }
 </style>
