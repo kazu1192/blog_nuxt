@@ -1,14 +1,17 @@
 <template>
   <div>
-    <div id="hamburger">
-      <div @click="onVisiblity">
-        <button-svg />
+    <div @click="toggleOpenClass" :class="{ open: isOpen }">
+      <div class="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
-
     <transition>
-      <nav :style="{ visibility: visibility }" class="menu">
-        <div>
+      <nav :class="{ open: isOpen }">
+        <div class="global-nav">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
@@ -23,61 +26,158 @@
 </template>
 
 <script>
-import ButtonSvg from '@/assets/icons/navbutton.svg'
-
 export default {
-  components: {
-    ButtonSvg
-  },
   data() {
     return {
-      isOpen: false,
-      visibility: 'hidden'
+      isOpen: false
     }
   },
   methods: {
-    onVisiblity() {
-      this.visibility = 'visibility'
+    toggleOpenClass() {
+      this.isOpen = !this.isOpen
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-/* Show Menu */
-.menu {
+.global-nav {
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu > div {
-  background: var(--overlay-color);
-  border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0);
-  transition: all 0.4s ease;
-}
-
-/* animated */
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s;
-}
-.v-enter,
-.v-leave-to {
+  font-size: 29px;
   opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+
+  a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.6s ease;
+
+    &:hover {
+      color: #666;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      opacity: 0;
+      transform: translateX(200px);
+      transition: transform 0.6s ease, opacity 0.2s ease;
+
+      &:nth-child(2) {
+        transition-delay: 0.15s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.45s;
+      }
+      &:nth-child(5) {
+        transition-delay: 0.6s;
+      }
+      &:nth-child(6) {
+        transition-delay: 0.75s;
+      }
+      &:nth-child(7) {
+        transition-delay: 0.9s;
+      }
+    }
+  }
+}
+
+.open {
+  overflow: hidden;
+
+  .global-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .global-nav li {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s ease, opacity 0.9s ease;
+  }
+}
+
+.nav-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  height: 32px;
+  cursor: pointer;
+
+  > div {
+    position: relative;
+    width: 36px;
+  }
+
+  span {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: #fff;
+    position: absolute;
+    transition: transform 0.6s ease-in-out, top 0.5s ease;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 14px;
+    }
+    &:nth-child(3) {
+      top: 28px;
+    }
+  }
+
+  &:hover span:nth-child(1) {
+    top: 4px;
+  }
+  &:hover span:nth-child(3) {
+    top: 23px;
+  }
+}
+
+.open {
+  .nav-toggle span {
+    background: #fff;
+
+    &:nth-child(1) {
+      top: 15px;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      top: 15px;
+      width: 0;
+      left: 50%;
+    }
+    &:nth-child(3) {
+      top: 15px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav-toggle {
+  z-index: 3;
 }
 </style>
