@@ -4,7 +4,9 @@
       class="xl:w-1/2 lg:w-2/3 md:w-3/4 w-auto max-w-4xl m-auto flex flex-wrap justify-center items-center p-4"
     >
       <div v-for="post in postList" :key="post.id" class="w-full">
-        <article class="flex-1 xl:p-12 p-6 my-4 rounded bg-green-600 shadow-md">
+        <article
+          class="flex-1 xl:px-12 px-6 py-4 my-4 rounded bg-green-600 shadow-md"
+        >
           <p class="text-sm text-white">
             {{ post.created_at }}
           </p>

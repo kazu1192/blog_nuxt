@@ -1,8 +1,17 @@
 <template>
   <div>
-    <transition>
-      <nav :class="{ open: isOpen }" class="global-nav">
+    <div @click="toggleOpenClass" :class="{ open: isOpen }">
+      <div class="nav-toggle">
         <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <transition>
+      <nav :class="{ open: isOpen }">
+        <div class="global-nav">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
@@ -13,13 +22,6 @@
         </div>
       </nav>
     </transition>
-    <div @click="toggleOpenClass" class="nav-toggle">
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -40,14 +42,15 @@ export default {
 
 <style lang="scss" scoped>
 .global-nav {
+  position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #000;
   color: #fff;
-  position: fixed;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   flex-direction: column;
   justify-content: center;
@@ -56,11 +59,62 @@ export default {
   font-size: 29px;
   opacity: 0;
   transition: opacity 0.6s ease, visibility 0.6s ease;
+
+  a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.6s ease;
+
+    &:hover {
+      color: #666;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      opacity: 0;
+      transform: translateX(200px);
+      transition: transform 0.6s ease, opacity 0.2s ease;
+
+      &:nth-child(2) {
+        transition-delay: 0.15s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.45s;
+      }
+      &:nth-child(5) {
+        transition-delay: 0.6s;
+      }
+      &:nth-child(6) {
+        transition-delay: 0.75s;
+      }
+      &:nth-child(7) {
+        transition-delay: 0.9s;
+      }
+    }
+  }
 }
 
 .open {
-  visibility: visible;
-  opacity: 1;
+  overflow: hidden;
+
+  .global-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .global-nav li {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s ease, opacity 0.9s ease;
+  }
 }
 
 .nav-toggle {
@@ -69,7 +123,6 @@ export default {
   right: 25px;
   height: 32px;
   cursor: pointer;
-  z-index: 2;
 
   > div {
     position: relative;
@@ -102,5 +155,29 @@ export default {
   &:hover span:nth-child(3) {
     top: 23px;
   }
+}
+
+.open {
+  .nav-toggle span {
+    background: #fff;
+
+    &:nth-child(1) {
+      top: 15px;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      top: 15px;
+      width: 0;
+      left: 50%;
+    }
+    &:nth-child(3) {
+      top: 15px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav-toggle {
+  z-index: 3;
 }
 </style>
