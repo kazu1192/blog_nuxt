@@ -1,33 +1,23 @@
 <template>
-  <div id="app">
-    <div class="header primary">
-      <div class="title">
-        {{ title }}
-      </div>
+  <div
+    class="xl:w-1/2 lg:w-2/3 md:w-3/4 w-auto max-w-4xl m-auto flex flex-wrap justify-center items-center p-4"
+  >
+    <div class="bg-white-opacity rounded shadow-md">
+      <article class="xl:p-12 p-6">
+        <article-content />
+      </article>
     </div>
-    <div class="markdown-body">
-      <div v-html="$md.render(article.bodyContent)" />
-    </div>
+    <div>Prev</div>
+    <div>Next</div>
   </div>
 </template>
 
 <script>
+import ArticleContent from '@/components/ui/Article.vue'
+
 export default {
-  async asyncData() {
-    const article = await import(`~/contents/json/dizzy.json`)
-    return {
-      title: "KAZU'S BLOG",
-      article
-    }
+  components: {
+    ArticleContent
   }
 }
 </script>
-
-<style scoped>
-.markdown-body {
-  margin: 40px;
-  padding: 60px;
-  color: RGB(232, 240, 222);
-  background: RGB(011, 054, 097);
-}
-</style>

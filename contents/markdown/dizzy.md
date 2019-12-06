@@ -1,5 +1,4 @@
 ---
-id: 'dizzy01'
 title: 'GGXrd Rev2 Dizzy'
 tags:
   - タグ1
@@ -13,7 +12,7 @@ updated_at: '2019-02-16 00:00:00'
 
 個人用メモ
 
-[TOC]
+![test](/images/blog/image1.jpeg)
 
 ## 暴れ潰し
 

@@ -18,10 +18,13 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/markdownit": "^1.2.7",
+    "github-markdown-css": "^3.0.1",
     "markdown-it-anchor": "^5.2.5",
     "markdown-it-highlightjs": "^3.0.0",
     "markdown-it-meta": "^0.0.1",
     "markdown-it-table-of-contents": "^0.4.4",
+    "markdown-it-toc": "^1.1.0",
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

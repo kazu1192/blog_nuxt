@@ -1,6 +1,6 @@
 {
   "fileMap": {
-    "contents/json/sample01.json": {
+    "contents/json/sample03.json": {
       "title": "What is Lorem Ipsum?",
       "tags": [
         "タグ1"
@@ -11,26 +11,25 @@
       "updated_at": "2019-02-16 00:00:00",
       "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
       "dir": "contents/json",
-      "base": "sample01.json",
+      "base": "sample03.json",
       "ext": ".json",
-      "sourceBase": "sample01.md",
+      "sourceBase": "sample03.md",
       "sourceExt": ".md"
     },
-    "contents/json/dizzy.json": {
-      "id": "dizzy01",
-      "title": "GGXrd Rev2 Dizzy",
+    "contents/json/sample04.json": {
+      "title": "What is Lorem Ipsum?",
       "tags": [
         "タグ1"
       ],
       "category": "その他",
-      "thumbnail": "@/assets/image4.jpeg",
+      "thumbnail": "../assets/image1.jpeg",
       "created_at": "2019-02-16 00:08:00",
       "updated_at": "2019-02-16 00:00:00",
-      "preview": "GGXrd Rev2 Dizzy\n\n個人用メモ\n\n[TOC]\n\n暴れ潰し\n\n暴れ潰し>投げ の割合で行う。\n暴れ潰しを行った結果相手がガードしていた場合、\n無理に攻め継続せず離れることも大事。\n\n2P>5HS (最速暴れ対策)\n2P>ダッシュ 5K (ダッシュ反応して暴れるタイプに)\n2P>2HS",
+      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
       "dir": "contents/json",
-      "base": "dizzy.json",
+      "base": "sample04.json",
       "ext": ".json",
-      "sourceBase": "dizzy.md",
+      "sourceBase": "sample04.md",
       "sourceExt": ".md"
     },
     "contents/json/sample02.json": {
@@ -49,20 +48,20 @@
       "sourceBase": "sample02.md",
       "sourceExt": ".md"
     },
-    "contents/json/sample03.json": {
-      "title": "What is Lorem Ipsum?",
+    "contents/json/dizzy.json": {
+      "title": "GGXrd Rev2 Dizzy",
       "tags": [
         "タグ1"
       ],
       "category": "その他",
-      "thumbnail": "../assets/image1.jpeg",
+      "thumbnail": "@/assets/image4.jpeg",
       "created_at": "2019-02-16 00:08:00",
       "updated_at": "2019-02-16 00:00:00",
-      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+      "preview": "GGXrd Rev2 Dizzy\n\n個人用メモ\n\ntest\n\n暴れ潰し\n\n暴れ潰し>投げ の割合で行う。\n暴れ潰しを行った結果相手がガードしていた場合、\n無理に攻め継続せず離れることも大事。\n\n2P>5HS (最速暴れ対策)\n2P>ダッシュ 5K (ダッシュ反応して暴れるタイプに)\n2P>2HS",
       "dir": "contents/json",
-      "base": "sample03.json",
+      "base": "dizzy.json",
       "ext": ".json",
-      "sourceBase": "sample03.md",
+      "sourceBase": "dizzy.md",
       "sourceExt": ".md"
     },
     "contents/json/sample05.json": {
@@ -81,7 +80,7 @@
       "sourceBase": "sample05.md",
       "sourceExt": ".md"
     },
-    "contents/json/sample04.json": {
+    "contents/json/sample01.json": {
       "title": "What is Lorem Ipsum?",
       "tags": [
         "タグ1"
@@ -92,9 +91,9 @@
       "updated_at": "2019-02-16 00:00:00",
       "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
       "dir": "contents/json",
-      "base": "sample04.json",
+      "base": "sample01.json",
       "ext": ".json",
-      "sourceBase": "sample04.md",
+      "sourceBase": "sample01.md",
       "sourceExt": ".md"
     }
   },

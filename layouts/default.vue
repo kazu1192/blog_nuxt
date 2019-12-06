@@ -5,7 +5,7 @@
     <transition mode="out-in">
       <nuxt />
     </transition>
-    <footer-component />
+    <footer-component class="mt-12" />
   </div>
 </template>
 

@@ -74,31 +74,6 @@ export default {
 
   ul {
     list-style: none;
-
-    li {
-      opacity: 0;
-      transform: translateX(200px);
-      transition: transform 0.6s ease, opacity 0.2s ease;
-
-      &:nth-child(2) {
-        transition-delay: 0.15s;
-      }
-      &:nth-child(3) {
-        transition-delay: 0.3s;
-      }
-      &:nth-child(4) {
-        transition-delay: 0.45s;
-      }
-      &:nth-child(5) {
-        transition-delay: 0.6s;
-      }
-      &:nth-child(6) {
-        transition-delay: 0.75s;
-      }
-      &:nth-child(7) {
-        transition-delay: 0.9s;
-      }
-    }
   }
 }
 
