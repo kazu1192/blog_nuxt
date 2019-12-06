@@ -1,0 +1,41 @@
+$base-green: rgb(104, 183, 135);
+$base-blue: rgb(011, 054, 097);
+$base-white: rgb(232, 240, 222);
+$base-blue-opacity: rgba(011, 054, 097, 0.5);
+$base-white-opacity: rgba(232, 240, 222, 0.5);
+
+.text-green-base {
+  color: $base-green;
+}
+
+.text-blue-base {
+  color: $base-blue;
+}
+
+.text-white-base {
+  color: $base-white;
+}
+
+.bg-green-base {
+  background-color: $base-green;
+}
+
+.bg-blue-base {
+  background-color: $base-blue;
+}
+
+.bg-white-base {
+  background-color: $base-white;
+}
+
+.bg-blue-opacity {
+  background-color: $base-blue-opacity;
+}
+
+.bg-white-opacity {
+  background-color: $base-white-opacity;
+}
+
+.border-blue-base {
+  border-color: $base-blue;
+}
