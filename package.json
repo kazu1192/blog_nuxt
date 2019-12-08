@@ -9,6 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "webserver": "http-server ./dist -o -p 8888",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
@@ -25,10 +26,11 @@
     "markdown-it-table-of-contents": "^0.4.4",
     "markdown-it-toc": "^1.1.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "prismjs": "^1.17.1"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/tailwindcss": "^1.2.0",
@@ -40,6 +42,7 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.0.1",
+    "http-server": "^0.12.0",
     "jest": "^24.1.0",
     "node-sass": "^4.13.0",
     "nuxt-svg-loader": "^1.0.1",

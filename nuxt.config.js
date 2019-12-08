@@ -9,7 +9,7 @@ export default {
   head: {
     title: process.env.npm_package_name || '',
     htmlAttrs: {
-      class: 'text-white-base bg-green-base'
+      class: 'text-main bg-base'
     },
     meta: [
       { charset: 'utf-8' },
@@ -38,7 +38,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/prism'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -62,11 +62,7 @@ export default {
     html: true,
     typography: true,
     injected: true,
-    use: [
-      'markdown-it-meta',
-      'markdown-it-highlightjs',
-      'markdown-it-table-of-contents'
-    ]
+    use: ['markdown-it-meta']
   },
   /*
    ** Axios module configuration

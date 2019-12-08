@@ -1,4 +1,5 @@
 ---
+name: sample02
 title: What is Lorem Ipsum?
 tags:
   - タグ1

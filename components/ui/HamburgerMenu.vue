@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @click="toggleOpenClass" :class="{ open: isOpen }">
+    <div :class="{ open: isOpen }" @click="toggleOpenClass">
       <div class="nav-toggle">
         <div>
           <span></span>
@@ -41,6 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/css/custom.scss';
+
 .global-nav {
   position: fixed;
   display: flex;
@@ -109,7 +111,7 @@ export default {
     height: 1px;
     left: 0;
     display: block;
-    background: #fff;
+    background: $moss-green;
     position: absolute;
     transition: transform 0.6s ease-in-out, top 0.5s ease;
 
