@@ -2,13 +2,11 @@
   <header>
     <div class="w-full mx-auto mt-4 p-6">
       <nuxt-link to="/blog">
-        <p class="text-5xl font-bold text-center animated fadeIn">
+        <p class="text-5xl font-bold text-center  animated fadeIn">
           {{ title }}
         </p>
       </nuxt-link>
-      <p
-        class="text-xl text-left  md:text-center my-4 animated fadeIn delay-1s"
-      >
+      <p class="text-xl text-left md:text-center my-4 animated fadeIn delay-1s">
         {{ subtitle }}
       </p>
     </div>

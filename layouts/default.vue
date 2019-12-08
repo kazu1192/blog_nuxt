@@ -3,7 +3,9 @@
     <navbar-component />
     <header-component />
     <transition mode="out-in">
-      <nuxt />
+      <div class="xl:w-1/2 lg:w-2/3 md:w-3/4 w-auto max-w-4xl m-auto">
+        <nuxt />
+      </div>
     </transition>
     <footer-component class="mt-12" />
   </div>
