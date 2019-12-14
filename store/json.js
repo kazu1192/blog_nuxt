@@ -1,11 +1,22 @@
-import bodyHtml from '../contents/json/sample01.json'
+import axios from 'axios'
 
 export const state = () => ({
-  bodyData: bodyHtml
+  items: []
 })
 
+export const mutations = {
+  setList(state, items) {
+    state.items = items
+  }
+}
+
 export const getters = {
-  getAll(state) {
-    return state.bodyData
+  items: (state) => state.items
+}
+
+export const actions = {
+  async getList({ commit }) {
+    const res = await axios.$get('@/contents/json/sample01.json')
+    commit('setList', res)
   }
 }
