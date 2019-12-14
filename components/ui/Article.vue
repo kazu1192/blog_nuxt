@@ -1,6 +1,6 @@
 <template>
   <article>
-    <pre>{{ data }}</pre>
+    <pre>{{ $route.params.slug }}</pre>
     <h1 class="text-6xl font-medium text-center leading-none tracking-wider">
       {{ json.title }}
     </h1>
@@ -19,15 +19,17 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Prism from '@/plugins/prism.js'
 import json from '@/contents/json/dizzy.json'
 
 export default {
+  async asyncData({ params }) {
+    const article = await import(`~/contents/json/${params.slug}.json`)
+    return {
+      article
+    }
+  },
   computed: {
-    ...mapGetters({
-      data: 'json/getAll'
-    }),
     json() {
       return json
     },
