@@ -1,6 +1,6 @@
 {
   "fileMap": {
-    "contents/json/dizzy.json": {
+    "contents/json/dizzy01.json": {
       "name": "dizzy01",
       "title": "GGXrd Rev2 Dizzy",
       "tags": [
@@ -12,26 +12,9 @@
       "updated_at": "2019-02-16 00:00:00",
       "preview": "GGXrd Rev2 Dizzy\n\n個人用メモ\n\n暴れ潰し\n\n暴れ潰し>投げ の割合で行う。\n暴れ潰しを行った結果相手がガードしていた場合、\n無理に攻め継続せず離れることも大事。\n\n2P>5HS (最速暴れ対策)\n2P>ダッシュ 5K (ダッシュ反応して暴れるタイプに)\n2P>2HS (リターン大)\n2P>ダッシュ",
       "dir": "contents/json",
-      "base": "dizzy.json",
+      "base": "dizzy01.json",
       "ext": ".json",
-      "sourceBase": "dizzy.md",
-      "sourceExt": ".md"
-    },
-    "contents/json/dizzy2.json": {
-      "name": "dizzy02",
-      "title": "GGXrd Rev2 Dizzy",
-      "tags": [
-        "タグ1"
-      ],
-      "category": "その他",
-      "thumbnail": "@/assets/image4.jpeg",
-      "created_at": "2019-02-16 00:08:00",
-      "updated_at": "2019-02-16 00:00:00",
-      "preview": "GGXrd Rev2 Dizzy\n\n個人用メモ\n\ntest\n\nGGXrd Rev2 Dizzy\n  暴れ潰し\n  固め\n  設置について\n  置き攻め - 中央 - 端\n  コンボ - 中央 - 端\n  キャラ対策 - ヴェノム - ポチョムキン - ジャム - ミリア - レオ -",
-      "dir": "contents/json",
-      "base": "dizzy2.json",
-      "ext": ".json",
-      "sourceBase": "dizzy2.md",
+      "sourceBase": "dizzy01.md",
       "sourceExt": ".md"
     },
     "contents/json/sample01.json": {
@@ -67,23 +50,6 @@
       "sourceBase": "sample02.md",
       "sourceExt": ".md"
     },
-    "contents/json/sample03.json": {
-      "name": "sample03",
-      "title": "What is Lorem Ipsum?",
-      "tags": [
-        "タグ1"
-      ],
-      "category": "その他",
-      "thumbnail": "../assets/image1.jpeg",
-      "created_at": "2019-02-16 00:08:00",
-      "updated_at": "2019-02-16 00:00:00",
-      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
-      "dir": "contents/json",
-      "base": "sample03.json",
-      "ext": ".json",
-      "sourceBase": "sample03.md",
-      "sourceExt": ".md"
-    },
     "contents/json/sample04.json": {
       "name": "sample04",
       "title": "What is Lorem Ipsum?",
@@ -100,11 +66,45 @@
       "ext": ".json",
       "sourceBase": "sample04.md",
       "sourceExt": ".md"
+    },
+    "contents/json/dizzy02.json": {
+      "name": "dizzy02",
+      "title": "GGXrd Rev2 Dizzy",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "@/assets/image4.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "GGXrd Rev2 Dizzy\n\n個人用メモ\n\ntest\n\nGGXrd Rev2 Dizzy\n  暴れ潰し\n  固め\n  設置について\n  置き攻め - 中央 - 端\n  コンボ - 中央 - 端\n  キャラ対策 - ヴェノム - ポチョムキン - ジャム - ミリア - レオ -",
+      "dir": "contents/json",
+      "base": "dizzy02.json",
+      "ext": ".json",
+      "sourceBase": "dizzy02.md",
+      "sourceExt": ".md"
+    },
+    "contents/json/sample03.json": {
+      "name": "sample03",
+      "title": "What is Lorem Ipsum?",
+      "tags": [
+        "タグ1"
+      ],
+      "category": "その他",
+      "thumbnail": "../assets/image1.jpeg",
+      "created_at": "2019-02-16 00:08:00",
+      "updated_at": "2019-02-16 00:00:00",
+      "preview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+      "dir": "contents/json",
+      "base": "sample03.json",
+      "ext": ".json",
+      "sourceBase": "sample03.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "contents/markdown/dizzy.md",
-    "contents/markdown/dizzy2.md",
+    "contents/markdown/dizzy01.md",
+    "contents/markdown/dizzy02.md",
     "contents/markdown/sample01.md",
     "contents/markdown/sample02.md",
     "contents/markdown/sample03.md",

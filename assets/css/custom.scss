@@ -35,3 +35,13 @@ $moss-green: #b1e0ab;
 .border-main {
   border-color: $moss-green;
 }
+
+/* transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}

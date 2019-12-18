@@ -2,11 +2,9 @@
   <div>
     <navbar-component />
     <header-component />
-    <transition mode="out-in">
-      <div class="xl:w-1/2 lg:w-2/3 md:w-3/4 w-auto max-w-4xl m-auto">
-        <nuxt />
-      </div>
-    </transition>
+    <div class="xl:w-1/2 lg:w-2/3 md:w-3/4 w-auto max-w-4xl m-auto">
+      <nuxt />
+    </div>
     <footer-component class="mt-12" />
   </div>
 </template>
@@ -24,14 +22,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s;
-}
-.v-enter,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

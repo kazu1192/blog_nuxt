@@ -1,16 +1,11 @@
 <template>
   <article>
-    <pre>{{ $route.params.slug }}</pre>
-    <h1 class="text-6xl font-medium text-center leading-none tracking-wider">
-      {{ json.title }}
-    </h1>
+    <h1
+      class="text-6xl font-medium text-center leading-none tracking-wider"
+    ></h1>
     <div class="pt-8">
       <img :src="image" class="m-auto" />
     </div>
-    <div
-      class="markdown-body line-numbers pt-8"
-      v-html="$md.render(json.bodyContent)"
-    />
     <div class="flex justify-between pt-8">
       <p>{{ prev }}</p>
       <p>{{ next }}</p>
@@ -18,36 +13,7 @@
   </article>
 </template>
 
-<script>
-import Prism from '@/plugins/prism.js'
-import json from '@/contents/json/dizzy.json'
-
-export default {
-  async asyncData({ params }) {
-    const article = await import(`~/contents/json/${params.slug}.json`)
-    return {
-      article
-    }
-  },
-  computed: {
-    json() {
-      return json
-    },
-    image() {
-      return '/images/blog/' + this.json.name + '/_main.jpg'
-    },
-    prev() {
-      return '<< PREV'
-    },
-    next() {
-      return 'NEXT >>'
-    }
-  },
-  mounted() {
-    Prism.highlightAll()
-  }
-}
-</script>
+<script></script>
 
 <style lang="scss">
 @import '@/assets/css/custom.scss';
