@@ -1,25 +1,15 @@
 <template>
   <div>
-    <blog-card />
-    <div class="text-center mx-auto mt-8">
-      <nuxt-link to="#">
-        {{ pagemore }}
-      </nuxt-link>
-    </div>
+    <CardList />
   </div>
 </template>
 
 <script>
-import BlogCard from '@/components/pages/BlogCard.vue'
+import CardList from '@/components/CardList'
 
 export default {
   components: {
-    BlogCard
-  },
-  data() {
-    return {
-      pagemore: 'MORE'
-    }
+    CardList
   }
 }
 </script>

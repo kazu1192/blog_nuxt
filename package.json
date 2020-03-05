@@ -30,6 +30,7 @@
     "prismjs": "^1.17.1"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
