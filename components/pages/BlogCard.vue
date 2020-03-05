@@ -5,7 +5,7 @@
       :key="post.id"
       class="flex-auto w-1/2 h-auto p-8"
     >
-      <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.name } }">
+      <nuxt-link :to="{ name: 'post-slug', params: { slug: post.name } }">
         <article>
           <h1 class="text-2xl font-bold">
             {{ post.title }}

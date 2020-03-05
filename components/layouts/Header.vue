@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="w-full mx-auto mt-4 p-6">
-      <nuxt-link to="/blog">
+      <nuxt-link to="/">
         <p class="text-5xl font-bold text-center  animated fadeIn">
           {{ title }}
         </p>
