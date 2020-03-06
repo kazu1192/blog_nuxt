@@ -4,36 +4,42 @@
 
 /* variable */
 
-$padua: #b9eab5;
-$blue-bayoux: #47647e;
-
-$blue-dianne: #26565d;
-$moss-green: #b1e0ab;
+$main: #dadada;
+$sub: #fff7f7;
+$accent: #204969;
 
 /* class */
 
-.text-base .hover\:text-base:hover {
-  color: $blue-dianne;
-}
-
 .text-main {
-  color: $moss-green;
+  color: $main;
 }
 
-.bg-base {
-  background-color: $blue-dianne;
+.text-sub {
+  color: $sub;
 }
 
-.bg-main .hover\:bg-main:hover {
-  background-color: $moss-green;
+.text-accent {
+  color: $accent;
 }
 
-.border-base {
-  border-color: $blue-dianne;
+.bg-main {
+  background-color: $main;
+}
+
+.bg-sub {
+  background-color: $sub;
+}
+
+.bg-accent {
+  background-color: $accent;
 }
 
 .border-main {
-  border-color: $moss-green;
+  border-color: $main;
+}
+
+.border-sub {
+  border-color: $sub;
 }
 
 /* transition */
@@ -41,6 +47,7 @@ $moss-green: #b1e0ab;
 .page-leave-active {
   transition: opacity 0.5s;
 }
+
 .page-enter,
 .page-leave-active {
   opacity: 0;

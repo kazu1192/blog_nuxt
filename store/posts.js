@@ -8,6 +8,8 @@ export const actions = {
   getPostList({ commit }) {
     const result = { list: [] }
     sourceFileArray.map((file) => {
+      // file = 'contents/markdown/****.md'
+      // path = 'contents/json/****.json'
       const path = file
         .replace('contents/markdown', 'contents/json')
         .replace('.md', '.json')
