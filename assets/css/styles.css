@@ -3619,12 +3619,8 @@ video {
   clear: both;
 }
 
-.font-display {
-  font-family: Source Sans Pro, sans-serif;
-}
-
 .font-body {
-  font-family: Arial, sans-serif;
+  font-family: Source Sans Pro, sans-serif;
 }
 
 .font-hairline {
@@ -14390,12 +14386,8 @@ video {
     clear: both;
   }
 
-  .sm\:font-display {
-    font-family: Source Sans Pro, sans-serif;
-  }
-
   .sm\:font-body {
-    font-family: Arial, sans-serif;
+    font-family: Source Sans Pro, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -25162,12 +25154,8 @@ video {
     clear: both;
   }
 
-  .md\:font-display {
-    font-family: Source Sans Pro, sans-serif;
-  }
-
   .md\:font-body {
-    font-family: Arial, sans-serif;
+    font-family: Source Sans Pro, sans-serif;
   }
 
   .md\:font-hairline {
@@ -35934,12 +35922,8 @@ video {
     clear: both;
   }
 
-  .lg\:font-display {
-    font-family: Source Sans Pro, sans-serif;
-  }
-
   .lg\:font-body {
-    font-family: Arial, sans-serif;
+    font-family: Source Sans Pro, sans-serif;
   }
 
   .lg\:font-hairline {
@@ -46706,12 +46690,8 @@ video {
     clear: both;
   }
 
-  .xl\:font-display {
-    font-family: Source Sans Pro, sans-serif;
-  }
-
   .xl\:font-body {
-    font-family: Arial, sans-serif;
+    font-family: Source Sans Pro, sans-serif;
   }
 
   .xl\:font-hairline {

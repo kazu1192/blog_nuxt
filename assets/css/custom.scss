@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 /**********
  * colors *
  **********/
@@ -7,6 +9,11 @@
 $main: #dadada;
 $sub: #fff7f7;
 $accent: #204969;
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
 
 /* class */
 
