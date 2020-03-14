@@ -1,11 +1,13 @@
 <template>
   <header class="bg-accent">
     <div class="w-full mx-auto p-10">
-      <nuxt-link to="/">
-        <p class="text-5xl font-bold text-center text-white animated fadeIn">
+      <p
+        class="mx-auto text-5xl font-bold text-center text-white animated fadeIn"
+      >
+        <nuxt-link to="/">
           {{ title }}
-        </p>
-      </nuxt-link>
+        </nuxt-link>
+      </p>
       <p class="text-xl text-center text-white my-4 animated fadeIn delay-1s">
         {{ subtitle }}
       </p>
